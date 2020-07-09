@@ -1,0 +1,917 @@
+/*Basic settings*/
+*
+{
+    box-sizing: border-box;
+
+    list-style: none;
+
+    text-decoration: none;
+}
+/*Body settings*/
+body
+{
+    margin: 0;
+}
+/*Heading settings*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    margin: 0;
+}
+
+/*List settings*/
+ul,
+ol
+{
+    margin: 0;
+    padding: 0;
+}
+/*Fonts settings*/
+@font-face
+{
+    font-family: 'MavenPro-Bold';
+
+    src: url('../fonts/MavenPro-Bold.ttf');
+}
+
+@font-face
+{
+    font-family: 'MavenPro-Medium';
+
+    src: url('../fonts/MavenPro-Medium.ttf');
+}
+
+@font-face
+{
+    font-family: 'MavenPro-Regular';
+
+    src: url('../fonts/MavenPro-Regular.ttf');
+}
+
+/*Classes settings*/
+.btn
+{
+    font-family: 'MavenPro-Bold';
+    font-size: 12px;
+
+    display: flex;
+
+    width: 190px;
+    height: 50px;
+
+    transition: background-color .4s ease, color .4s ease;
+    text-transform: uppercase;
+
+    color: #d1d7e4;
+    border: 1px solid #d7dbe8;
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0 0 18.69px 2.31px rgba(204, 204, 223, .5);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover
+{
+    color: #fff;
+    background-color: #6e45e2;
+    box-shadow: 0 0 0;
+}
+
+.adaptive-menu
+{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+
+    display: flex;
+
+    width: 100%;
+    height: 100vh;
+
+    transition: all .8s ease;
+    transform: translateX(100%);
+
+    background-color: #6e45e2;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.adaptive-menu-link
+{
+    line-height: 4;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.adaptive-menu-link li a
+{
+    font-family: 'MavenPro-Medium';
+    font-size: 24px;
+
+    color: #fff;
+}
+.adaptive-menu-link li .close-btn
+{
+    font-family: 'MavenPro-Medium';
+    font-size: 40px;
+
+    position: absolute;
+    top: 10px;
+    right: 80px;
+
+    height: auto;
+
+    cursor: pointer;
+
+    color: #fff;
+}
+
+.adaptive-menu-link li .navBtn
+{
+    font-size: 12px;
+
+    margin-left: 0;
+}
+
+.switch
+{
+    transform: translateX(0);
+}
+
+/*Burger-button*/
+.burger-btn .fa-bars
+{
+    font-size: 32px;
+
+    color: #fff;
+}
+
+.burger-btn
+{
+    display: none;
+}
+
+/*Header*/
+
+.header
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+
+    background: url('../img/header/header-bg.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.header__link
+{
+    display: flex;
+
+    padding: 48px 50px 0 50px;
+
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo a
+{
+    display: flex;
+
+    align-items: center;
+}
+
+.logoText
+{
+    font-family: 'MavenPro-Bold';
+    font-size: 30px;
+
+    margin-left: 17px;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+.header > *
+{
+    position: relative;
+    z-index: 2;
+}
+
+.header__gradient
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    opacity: .8;
+    background-image: -webkit-linear-gradient(240deg, rgb(136,211,206) 0%, rgb(110,69,226) 100%);
+    background-image:      -o-linear-gradient(240deg, rgb(136,211,206) 0%, rgb(110,69,226) 100%);
+    background-image:         linear-gradient(330deg, rgb(136,211,206) 0%, rgb(110,69,226) 100%);
+}
+
+.header__gradient img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.link
+{
+    display: flex;
+
+    align-items: center;
+}
+
+.link li > a
+{
+    font-family: 'MavenPro-Medium';
+    font-size: 16px;
+
+    display: flex;
+
+    width: 140px;
+    height: 49px;
+
+    color: #fff;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.link li a:hover
+{
+    border-bottom: 1px solid #fff;
+}
+
+.header__nav
+{
+    display: flex;
+
+    align-items: center;
+}
+
+.navBtn
+{
+    font-family: 'MavenPro-Regular';
+    font-size: 12px;
+
+    display: flex;
+
+    width: 148px;
+    height: 48px;
+    margin-left: 10px;
+
+    transition: background-color .3s ease;
+    text-transform: uppercase;
+
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    background-color: transparent;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.navBtn:hover
+{
+    border-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.5);
+}
+
+.header__title
+{
+    font-family: 'MavenPro-Bold';
+    font-size: 14px;
+
+    position: relative;
+
+    display: inline-flex;
+
+    margin: 202px auto 43px auto;
+
+    color: #fff;
+}
+
+.header__title::before,
+.header__title::after
+{
+    position: absolute;
+    top: 50%;
+
+    width: 24px;
+    height: 1px;
+
+    content: '';
+
+    background-color: #fff;
+}
+
+.header__title::before
+{
+    left: 242px;
+}
+
+.header__title::after
+{
+    right: 242px;
+}
+
+.header__heading
+{
+    font-family: 'MavenPro-Medium';
+    font-size: 86px;
+
+    margin: 0;
+    margin-bottom: 23px;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+.header__subtitle
+{
+    font-family: 'MavenPro-Regular';
+    font-size: 16px;
+    line-height: 1.5;
+
+    margin-bottom: 150px;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+.arrowDown
+{
+    display: flex;
+
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+
+    border-radius: 50%;
+    background-color: #fff;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/*Main*/
+
+.main
+{
+    display: flex;
+    flex-direction: column;
+
+    padding: 120px 0 66px 0;
+
+    border-top: 1px solid #e3e6ee;
+    background-color: #f9fafc;
+
+    align-items: center;
+}
+
+.main__title
+{
+    font-family: 'MavenPro-Bold';
+    font-size: 14px;
+
+    position: relative;
+
+    margin-bottom: 30px;
+
+    text-transform: uppercase;
+
+    color: #9fa4af;
+}
+
+.main__title::before,
+.main__title::after
+{
+    position: absolute;
+    top: 50%;
+
+    width: 24px;
+    height: 1px;
+
+    content: '';
+    transform: translateX(-50%);
+
+    background-color: #6e45e2;
+}
+
+.main__title::before
+{
+    left: -31px;
+}
+
+.main__title::after
+{
+    left: 96px;
+}
+
+.main__heading
+{
+    font-family: 'MavenPro-Regular';
+    font-size: 60px;
+
+    margin: 0 0 40px 0;
+
+    color: #4f4f6f;
+}
+
+.main__subtitle
+{
+    font-family: 'MavenPro-Regular';
+    font-size: 16px;
+    line-height: 1.5;
+
+    margin-bottom: 100px;
+
+    text-align: center;
+
+    color: #9fa4af;
+}
+
+.main__cards
+{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.cards__item
+{
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px 56px;
+
+    cursor: pointer;
+    transition: background-color .5s ease, box-shadow .5s ease, border .2s ease;
+
+    border: 1px solid rgb(215, 219, 232);
+    border-radius: 30px;
+    background-color: #fff;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.cards__item:not(:last-child)
+{
+    margin-right: 50px;
+}
+
+.cards__item:hover
+{
+    border-color: #fff;
+    box-shadow: 0 0 81.88px 10.12px rgba(204, 204, 223, .71);
+}
+
+.cards__item img
+{
+    width: 120px;
+    height: 108px;
+}
+
+.item__icon
+{
+    margin-bottom: 60px;
+}
+
+.item__title
+{
+    font-family: 'MavenPro-Bold';
+    font-size: 14px;
+
+    margin-bottom: 25px;
+
+    text-transform: uppercase;
+
+    color: #9fa4af;
+}
+
+.item__price
+{
+    font-family: 'MavenPro-Medium';
+    font-size: 20px;
+
+    margin-bottom: 50px;
+
+    color: #4f4f6f;
+}
+
+.item__price span
+{
+    font-size: 60px;
+
+    position: relative;
+}
+
+.item__price span::before
+{
+    font-size: 15px;
+
+    position: absolute;
+    top: 15px;
+    left: -10px;
+
+    width: 8px;
+    height: 15px;
+
+    content: '$';
+}
+
+.item__subtitle
+{
+    font-family: 'MavenPro-Regular';
+    font-size: 16px;
+    line-height: 1.5;
+
+    margin-bottom: 55px;
+
+    text-align: center;
+
+    color: #9fa4af;
+}
+
+.control
+{
+    display: flex;
+    flex-direction: column;
+
+    height: 520px;
+
+    color: #fff;
+    background: url('../img/control/control-bg.jpg') no-repeat center;
+    background-size: cover;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.control__title
+{
+    font-family: 'MavenPro-Bold';
+    font-size: 14px;
+
+    margin-bottom: 26px;
+}
+
+.control__heading
+{
+    font-family: 'MavenPro-Medium';
+    font-size: 60px;
+
+    margin-bottom: 18px;
+}
+
+.control__btns
+{
+    display: flex;
+
+    align-items: center;
+}
+
+.control__btns .btn
+{
+    border: none;
+    box-shadow: 0 0 0 0;
+}
+
+.control__btns .btn:first-child
+{
+    margin-right: 10px;
+}
+
+/*Footer*/
+
+.footer
+{
+    padding: 50px 50px 26px 50px;
+}
+
+.footer__logo a
+{
+    display: flex;
+
+    align-items: center;
+}
+
+.fLink
+{
+    display: flex;
+
+    align-items: center;
+}
+
+.footer__nav
+{
+    display: flex;
+
+    align-items: center;
+}
+.footer__link
+{
+    display: flex;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #f2f2f3;
+
+    align-items: center;
+    justify-content: space-between;
+}
+.footer__link .logoText
+{
+    color: #37374a;
+}
+
+.fLink li > *
+{
+    font-family: 'MavenPro-Medium';
+
+    width: auto;
+    height: auto;
+
+    transition: color .4s ease;
+
+    color: #6a6a77;
+}
+
+.fLink li
+{
+    margin-right: 60px;
+}
+
+.fLink li a:hover
+{
+    color: #756edc;
+    border-bottom: none;
+}
+
+.footer__nav .navBtn
+{
+    font-family: 'MavenPro-Bold';
+
+    background-color: #6e45e2;
+}
+
+.copyright
+{
+    display: flex;
+
+    margin-top: 30px;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text
+{
+    font-family: 'MavenPro-Medium';
+    font-size: 14px;
+
+    color: #6a6a77;
+}
+
+.socialNetwork a > *
+{
+    font-size: 18px;
+
+    transition: color .2s ease;
+
+    color: #6a6a77;
+}
+
+.socialNetwork a:not(:last-child)
+{
+    margin-right: 17px;
+}
+
+.socialNetwork a > *:hover
+{
+    color: #6e45e2;
+}
+
+/*Media queries*/
+
+@media screen and (max-width: 1199px)
+{
+    .header__nav
+    {
+        display: none;
+    }
+
+    .burger-btn
+    {
+        display: block;
+    }
+
+    .main__cards
+    {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .cards__item:not(:last-child)
+    {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .cards__item
+    {
+        width: 60%;
+    }
+
+    .footer__nav
+    {
+        display: none;
+    }
+
+    .footer__link
+    {
+        padding-bottom: 15px;
+
+        justify-content: center;
+    }
+
+    .copyright
+    {
+        flex-direction: column;
+
+        margin-top: 20px;
+    }
+
+    .socialNetwork
+    {
+        margin-top: 20px;
+    }
+
+    .socialNetwork a .fa
+    {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .cards__item
+    {
+        width: 90%;
+        height: 50%;
+    }
+
+    .header__link
+    {
+        padding: 24px 15px 0 15px;
+    }
+
+    .item__icon,
+    .item__title,
+    .item__price,
+    .item__subtitle
+    {
+        margin-bottom: 20px;
+    }
+
+    .cards__item
+    {
+        padding: 30px 36px;
+    }
+
+    .header__heading
+    {
+        font-size: 32px;
+    }
+
+    .header__title
+    {
+        margin: 100px auto 43px auto;
+    }
+
+    .control__heading
+    {
+        font-size: 32px;
+    }
+
+    .control
+    {
+        height: 300px;
+    }
+
+    .main__heading
+    {
+        font-size: 32px;
+    }
+
+    .header
+    {
+        background-position: left;
+    }
+
+    .main
+    {
+        padding-top: 66px;
+    }
+}
+
+@media screen and (max-width: 576px)
+{
+    .text
+    {
+        line-height: 1.3;
+
+        text-align: center;
+    }
+
+    .control__btns
+    {
+        flex-direction: column;
+    }
+
+    .control__btns .btn:first-child
+    {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .control__heading
+    {
+        font-size: 24px;
+
+        text-align: center;
+    }
+
+    .logoText
+    {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 360px)
+{
+    .cards__item
+    {
+        width: 90%;
+        height: 10%;
+        padding: 16px;
+    }
+
+    .item__subtitle
+    {
+        font-size: 14px;
+    }
+
+    .header__title
+    {
+        font-size: 12px;
+    }
+
+    .header__title::after
+    {
+        right: 200px;
+    }
+
+    .header__title::before
+    {
+        left: 200px;
+    }
+
+    .header__subtitle
+    {
+        margin-bottom: 100px;
+    }
+}
