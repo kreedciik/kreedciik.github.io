@@ -79,7 +79,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
     let more = document.querySelector('.more'),
         overlay = document.querySelector('.overlay'),
-        closeBtn = document.querySelector('.popup-close');
+        closeBtn = document.querySelector('.popup-close'),
+        popup = document.querySelector('.popup');
 
     // Obrabativayu sobitie click
 
@@ -87,18 +88,24 @@ window.addEventListener('DOMContentLoaded', function () {
 
         overlay.classList.remove('slide-out');
         overlay.classList.add('slide-in');
+        popup.style.top = 150 + 'px';
         document.body.style.overflow = 'hidden';
     })
 
-    // Obrabativayu sobitie click na closeBtn
+    overlay.addEventListener('click', function(e){
 
-    closeBtn.addEventListener('click', function(){
+        if(e.target.classList.contains('popup-close') || e.target.classList.contains('overlay')){
+            this.classList.add('slide-out');
+            this.classList.remove('slide-in');
+            document.body.style.overflow = '';
+        }else{
 
-        overlay.classList.remove('slide-in');
-        overlay.classList.add('slide-out');
-        document.body.style.overflow = '';
-
-    });
+            this.classList.remove('slide-out');
+            this.classList.add('slide-in');
+             
+        }
+           
+    })
     
 // Create calculation of price
 
@@ -111,8 +118,8 @@ window.addEventListener('DOMContentLoaded', function () {
     };
 
         select.addEventListener('change', function(e){
-        calculatePrice.countOfPeople = +counterPeople.value,
-        calculatePrice.countOfDay = +countDay.value,
+        calculatePrice.countOfPeople = +counterPeople.value.replace(/'.'/g, '');
+        calculatePrice.countOfDay = +countDay.value;
         calculatePrice.defaultPrice = +e.target.value;
         total.textContent = (calculatePrice.defaultPrice * calculatePrice.countOfPeople * calculatePrice.countOfDay).toFixed(2) + '$';
         
@@ -124,7 +131,7 @@ window.addEventListener('DOMContentLoaded', function () {
         calculatePrice.countOfPeople = +counterPeople.value;
         calculatePrice.countOfDay = +countDay.value;
         total.textContent = (calculatePrice.defaultPrice * calculatePrice.countOfPeople * calculatePrice.countOfDay).toFixed(2) + '$';
-        })
+        });
     };
 
     });

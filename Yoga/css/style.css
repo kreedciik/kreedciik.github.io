@@ -28,14 +28,17 @@
 
 .slide-in{
 
-  transform: translateY(0);
+  opacity: 1;
+  top: 0;
 
 }
 
 
 .slide-out{
 
-  transform: translateY(-100%);
+  opacity: 0;
+  top: -100%;
+
 
 }
 
@@ -558,17 +561,20 @@ header ul li:before {
 }
 .overlay {
   position: fixed;
-  top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 3;
   transition: all 1.5s ease;
+  overflow: auto;
 }
 .overlay .popup {
-  position: fixed;
+  position: absolute;
   z-index: 4;
   left: 50%;
-  top: 150px;
+  top: -100%;
+/*  top: -100%;*/
+/*  top: 150px;*/
+transition: opacity 0.5s ease; 
   width: 752px;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
