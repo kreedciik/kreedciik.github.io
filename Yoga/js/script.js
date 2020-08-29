@@ -128,6 +128,7 @@ window.addEventListener('DOMContentLoaded', function () {
     for(let i = 0; i < inputs.length; i++){
 
         inputs[i].addEventListener('keyup', function(e){
+        this.value = this.value.replace(/\D/g, '');
         calculatePrice.countOfPeople = +counterPeople.value;
         calculatePrice.countOfDay = +countDay.value;
         total.textContent = (calculatePrice.defaultPrice * calculatePrice.countOfPeople * calculatePrice.countOfDay).toFixed(2) + '$';
