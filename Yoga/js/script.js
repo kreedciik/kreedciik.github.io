@@ -118,8 +118,7 @@ window.addEventListener('DOMContentLoaded', function () {
     };
 
         select.addEventListener('change', function(e){
-        calculatePrice.countOfPeople = +counterPeople.value.replace(/'.'/g, '');
-        calculatePrice.countOfDay = +countDay.value;
+
         calculatePrice.defaultPrice = +e.target.value;
         total.textContent = (calculatePrice.defaultPrice * calculatePrice.countOfPeople * calculatePrice.countOfDay).toFixed(2) + '$';
         
@@ -127,11 +126,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
     for(let i = 0; i < inputs.length; i++){
 
-        inputs[i].addEventListener('keyup', function(e){
-        this.value = this.value.replace(/\D/g, '');
-        calculatePrice.countOfPeople = +counterPeople.value;
+        inputs[i].addEventListener('input', function(e){
+        let regExp = /\D/g;
+        this.value = this.value.replace(regExp, '');
         calculatePrice.countOfDay = +countDay.value;
+        calculatePrice.countOfPeople = +counterPeople.value;
         total.textContent = (calculatePrice.defaultPrice * calculatePrice.countOfPeople * calculatePrice.countOfDay).toFixed(2) + '$';
+
         });
     };
 
