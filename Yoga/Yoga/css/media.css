@@ -1,0 +1,267 @@
+@media screen and (max-width: 1200px){
+
+    .content .contact-img img{
+
+        width: 100%;
+        height: 100%;
+        transform: translateY(0);
+    }
+
+    .wrap .slick-arrow{
+
+        height: 604.63px;
+    }
+
+}
+@media screen and (max-width: 992px){
+
+    .description-title{
+
+        white-space: nowrap;
+    }
+
+    .content .contact-img{
+
+        display: none;
+    }
+
+    .content .contact-form-title {
+
+        white-space: nowrap;
+    }
+
+    .content .contact-form form input {
+
+        width: 100%;
+    }
+
+    .content .counter-block-option{
+
+        white-space: nowrap;
+    }
+
+    .content .counter-block select{
+
+        margin-left: 20px;
+    }
+
+      .wrap .slick-arrow{
+
+        height: 449.63px;
+    }
+
+    .fake-select__selected{
+
+        margin-left: 20px;
+    }
+
+    .fake-select__list{
+
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+    form.main-form{
+        
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .overlay .popup-form__btn {
+
+        margin: 20px 0 0 0;
+    }
+
+   .overlay .popup{
+
+        width: 80%;
+   }
+
+   .content .info-tabcontent .photo{
+
+    display: none;
+   }
+
+   .content .info-tabcontent .description, .content .info-tabcontent .photo{
+
+        width: 100%;
+   }
+
+}
+
+@media screen and (max-width: 576px){
+
+    .content .info-tabcontent{
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content .info-tabcontent .photo {
+
+        display: none;
+    }
+
+    .content .info-tabcontent .description{
+
+        width: 100%;
+    }
+
+    .content footer .social .social-block{
+
+        height: 50px;
+        width: 50px;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        -ms-align-items: center;
+        align-items: center;
+    }
+
+    .content footer .social .social-block a{
+
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -ms-align-items: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content footer .social .social-block a img{
+
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    .content .info{
+
+        padding: 10px;
+    }
+
+    .content .info-tabcontent .description-title{
+
+        font-size: 20px;
+    }
+
+    .content .counter-total{
+
+        font-size: 24px;
+    }
+
+    .content .counter-block-option{
+
+        font-size: 18px;
+    }
+
+    .content .timer-title{
+
+        font-size: 32px;
+    }
+
+    .content .info-header{
+
+        flex-wrap: wrap;
+    }
+
+    .content .info-header-tab{
+
+        margin: 0 20px 10px 0;
+    }
+
+    .main-block-title{
+
+        font-size: 48px;
+    }
+
+    .content .timer-numbers{
+
+        font-size: 48px;
+    }
+
+    .content .counter-block-input{
+        
+        width: 80px;
+        height: 40px;
+        font-size: 32px;
+    }
+
+    .content .contact-form-title{
+
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .content .contact-form{
+
+        width: 100%;
+        padding: 20px;
+    }
+
+    .overlay .popup-form__input{
+
+        width: auto;
+    }
+
+    .overlay .popup-title{
+
+        font-size: 18px;
+    }
+
+    .overlay .popup-form{
+        
+        padding: 20px;
+    }
+
+    .overlay .popup-form-header{
+
+        font-size: 24px;
+    }
+
+    .overlay .popup{
+
+        width: 85%;
+    }
+
+    .content .timer, .content .slider, .content .counter, .content .contact{
+
+        margin-top: 80px;
+    }
+
+    .main-block{
+
+        margin-top: 80px; 
+    }
+
+    .content .counter-block{
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .fake-select__selected{
+
+        margin: 20px 0 0 0;
+    }
+
+    .fake-select__list{
+
+        left: 0;
+    }
+    
+}
+
