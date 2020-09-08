@@ -129,6 +129,11 @@ window.addEventListener('DOMContentLoaded', function () {
         inputs[i].addEventListener('input', function(e){
         let regExp = /\D/g;
         this.value = this.value.replace(regExp, '');
+              
+        if(this.value.split('')[0] === '0'){
+
+            this.value = this.value.substr(1);
+        }
         calculatePrice.countOfDay = +countDay.value;
         calculatePrice.countOfPeople = +counterPeople.value;
         total.textContent = (calculatePrice.defaultPrice * calculatePrice.countOfPeople * calculatePrice.countOfDay).toFixed(2) + '$';
